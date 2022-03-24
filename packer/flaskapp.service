@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask App Service
+After=multi-user.target
+StartLimitIntervalSec=400
+StartLimitBurst=3
+
+[Service]
+Type=idle
+User=ec2-user
+ExecStart=/usr/bin/python3 /home/ec2-user/Users/dharjani/Downloads/webserviceUpdated/webservice/app.py
+
+[Install]
+WantedBy=multi-user.target
