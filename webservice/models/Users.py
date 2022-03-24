@@ -1,4 +1,5 @@
 from . import db
+
 class Users(db.Model):
     __tablename__='Users'
     email=db.Column(db.String(),primary_key=True)
