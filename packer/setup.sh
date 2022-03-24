@@ -17,10 +17,10 @@ tar xvzf webservice-0.0.1.tar.gz
 
 # Add path to the environment
 export PATH=/home/ec2-user/.local/bin:$PATH
-export S3_BUCKET="flask-s3-demo-dh"
-export S3_URL_PREFIX="flask-s3-demo-dh.s3.us-east-2.amazonaws.com"
-export RDS_USERNAME="admin"
-export RDS_DB="csye6225"
+#export S3_BUCKET="flask-s3-demo-dh"
+#export S3_URL_PREFIX="flask-s3-demo-dh.s3.us-east-2.amazonaws.com"
+#export RDS_USERNAME="admin"
+#export RDS_DB="csye6225"
 
 # Install dependencies
 pip3 install python-dotenv
