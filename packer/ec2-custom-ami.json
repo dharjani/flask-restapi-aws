@@ -4,9 +4,9 @@
     "builders": [
         {
             "type": "amazon-ebs",
-            "access_key": "{{ env 'AWS_KEY' }}",
-            "secret_key": "{{ env 'AWS_SECRET_ACCESS_KEY' }}",
-            "region": "us-east-1",
+            "access_key": "{{ env `AWS_KEY` }}",
+            "secret_key": "{{ env `AWS_SECRET_ACCESS_KEY` }}",
+            "region": "{{ env `AWS_DEFAULT_REGION` }}",
             "ami_name": "csye6225_custom_ami_{{timestamp}}",
             "force_deregister": "true",
             "force_delete_snapshot": "true",
@@ -36,16 +36,16 @@
         },
         {
             "environment_vars": [
-                "S3_BUCKET={{ env 'S3_BUCKET' }}",
-                "S3_KEY={{ env 'S3_KEY' }}",
-                "S3_SECRET_ACCESS_KEY={{ env 'S3_SECRET_ACCESS_KEY' }}",
-                "S3_URL_PREFIX={{ env 'S3_URL_PREFIX' }}",
-                "AWS_KEY={{ env 'AWS_KEY' }}",
-                "AWS_SECRET_ACCESS_KEY={{ env 'AWS_SECRET_ACCESS_KEY' }}",
-                "RDS_USERNAME={{ env 'RDS_USERNAME' }}",
-                "RDS_PWD={{ env 'RDS_PWD' }}",
-                "RDS_DB={{ env 'RDS_DB' }}",
-                "RDS_HOST={{ env 'RDS_HOST' }}"
+                "S3_BUCKET={{ env `S3_BUCKET` }}",
+                "S3_KEY={{ env `S3_KEY` }}",
+                "S3_SECRET_ACCESS_KEY={{ env `S3_SECRET_ACCESS_KEY` }}",
+                "S3_URL_PREFIX={{ env `S3_URL_PREFIX` }}",
+                "AWS_KEY={{ env `AWS_KEY` }}",
+                "AWS_SECRET_ACCESS_KEY={{ env `AWS_SECRET_ACCESS_KEY` }}",
+                "RDS_USERNAME={{ env `RDS_USERNAME` }}",
+                "RDS_PWD={{ env `RDS_PWD` }}",
+                "RDS_DB={{ env `RDS_DB` }}",
+                "RDS_HOST={{ env `RDS_HOST` }}"
             ],
             "type": "shell",
             "script": "setup.sh"
