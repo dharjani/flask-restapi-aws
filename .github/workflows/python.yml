@@ -26,7 +26,6 @@ jobs:
       - name: Build file
         run: python3 setup.py sdist
 
-
   test:
     name: Running Units Tests
     runs-on: ubuntu-latest
@@ -70,12 +69,12 @@ jobs:
       - name: Build file
         run: python3 setup.py sdist
       - name: copy build file
-        uses: canastro/copy-file-action@main
+        uses: canastro/copy-file-action@master
         with:
           source: "dist/webservice-0.0.1.tar.gz"
           target: "packer/webservice-0.0.1.tar.gz"
       - name: copy requirements file
-        uses: canastro/copy-file-action@main
+        uses: canastro/copy-file-action@master
         with:
           source: "requirements.txt"
           target: "packer/requirements.txt"
